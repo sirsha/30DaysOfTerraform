@@ -60,3 +60,47 @@ This 30-day journey is about building strong fundamentals before moving into adv
 
 ## 📂 Repository Structure
 
+Each folder contains:
+- Terraform files
+- Notes
+- Observations
+- Learnings
+
+---
+
+## 💡 Why Public Learning?
+
+Because:
+- Consistency beats motivation
+- Accountability accelerates growth
+- Documentation builds clarity
+- Sharing knowledge helps others
+
+---
+
+## 🙌 Credits
+
+Special thanks to **Piyush Sachdeva** for structured and practical Terraform explanations that made starting this journey easier.
+
+You can check his content here:
+👉 (Add YouTube link here)
+
+---
+
+## 🔥 Long-Term Vision
+
+This is not just about learning Terraform.
+
+It’s about:
+- Thinking like a Cloud Engineer
+- Designing scalable infrastructure
+- Understanding production systems
+- Moving from "tool user" to "infrastructure engineer"
+
+---
+
+If you're also learning Terraform, feel free to connect or contribute 🚀
+
+#Terraform #DevOps #InfrastructureAsCode #AWS #CloudEngineering
+
+
