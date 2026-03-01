@@ -210,7 +210,26 @@ resource "aws_s3_bucket" "demo" {
 
 }
 ```
+👉 Implicit Dependencies
 
+In Terraform, you don’t always need depends_on.
+
+If one resource references another, Terraform automatically understands the dependency.
+
+For example:
+
+Create a VPC
+
+Create an S3 bucket
+
+Reference the VPC ID inside the S3 bucket tags
+
+That simple reference makes Terraform:
+
+VPC → created first
+S3 bucket → created after
+
+No manual dependency declaration required.
 ---
 
 # 🚀 Terraform Workflow Commands
