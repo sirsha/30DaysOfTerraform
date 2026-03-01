@@ -235,7 +235,7 @@ aws sts get-caller-identity
 
 ## 🔥 Reflection
 
-Day 3 reinforced that infrastructure provisioning is not just about writing Terraform code — it starts with proper authentication and secure configuration.
+Day 3 reinforced that infrastructure provisioning is not just about writing Terraform code, it starts with proper authentication and secure configuration.
 
 Understanding credential flow and authentication methods makes Terraform safer and more production-ready.
 
