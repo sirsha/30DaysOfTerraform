@@ -78,14 +78,6 @@ Because:
 
 ---
 
-## 🙌 Credits
-
-Special thanks to **Piyush Sachdeva** for structured and practical Terraform explanations that made starting this journey easier.
-
-You can check his content here:
-👉 (Add YouTube link here)
-
----
 
 ## 🔥 Long-Term Vision
 
@@ -102,5 +94,6 @@ It’s about:
 If you're also learning Terraform, feel free to connect or contribute 🚀
 
 #Terraform #DevOps #InfrastructureAsCode #AWS #CloudEngineering
+
 
 
