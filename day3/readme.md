@@ -166,22 +166,48 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_b
 
 ---
 
-## 2️⃣ Create S3 Bucket Using Terraform
+## 2️⃣ Create S3 Bucket WS VPC and an S3 bucket Using Terraform, ensuring the bucket has an implicit dependency on the VPC
 
 Example:
 
 ```hcl
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+    
+  }
+  required_version = ">= 1.3.0"
+}
+
+# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_s3_bucket" "demo" {
-  bucket = "sirsha-terraform-day3-demo-bucket"
+# Create a VPC
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
+  enable_dns_support   = true
+  enable_dns_hostnames = true
 
   tags = {
-    Name        = "Day3-S3-Bucket"
-    Environment = "Dev"
+    Name = "terraform-demo-vpc"
   }
+}
+resource "aws_s3_bucket" "demo" {
+  bucket = "sirsha-terraform-vpc-demo-123456"  # Must be globally unique
+
+  # 🔹 Implicit dependency created here
+  # Because we reference aws_vpc.main.id
+  tags = {
+    Name   = "terraform-demo-bucket"
+    VpcId  = aws_vpc.example.id
+    VpcCIDR = aws_vpc.example.cidr_block
+  }
+
 }
 ```
 
