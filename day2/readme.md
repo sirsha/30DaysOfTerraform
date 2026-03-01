@@ -139,6 +139,11 @@ version = "~> 5.0"
 Means:
 - Minimum: 5.0.0
 - Maximum: < 6.0.0
+So Terraform can use:
+5.0.0
+5.1.0
+5.2.5
+5.9.99
 
 Allows:
 ✔ Minor updates  
