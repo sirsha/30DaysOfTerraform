@@ -1,0 +1,15 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+.terraform.lock.hcl  # optional: many teams DO commit this; you can remove this line if you want to keep it
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# CLI config
+.terraformrc
+terraform.rc
