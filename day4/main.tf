@@ -6,7 +6,7 @@ terraform {
     }
     
   }
-  required_version = ">= 1.3.0"
+ 
 }
 
 # Configure the AWS Provider
@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 # Create a VPC
-resource "aws_vpc" "example" {
+resource "aws_vpc" "day4" {
   cidr_block = "10.0.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
@@ -25,14 +25,12 @@ resource "aws_vpc" "example" {
   }
 }
 resource "aws_s3_bucket" "demo" {
-  bucket = "sirsha-terraform-vpc-demo-123456"  # Must be globally unique
-
-  # 🔹 Implicit dependency created here
-  # Because we reference aws_vpc.main.id
+  bucket = "sirsha-terraform-vpc-demo-123456"
   tags = {
     Name   = "terraform-demo-bucket"
-    VpcId  = aws_vpc.example.id
-    VpcCIDR = aws_vpc.example.cidr_block
+    VpcId  = aws_vpc.day4.id
+    VpcCIDR = aws_vpc.day4.cidr_block
   }
+
 
 }
