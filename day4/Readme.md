@@ -1,3 +1,4 @@
+![Terraform State Architecture](https://github.com/sirsha/30DaysOfTerraform/blob/main/day4/Untitled-2026-01-20-1727.png)
 # Why the Terraform State File Is Critical  
 *A Story from the Real World*
 
@@ -162,7 +163,8 @@ Terraform **locks the state**.
 
 This prevents **race conditions**.
 
----
+<img src= "https://github.com/sirsha/30DaysOfTerraform/blob/main/day4/Screenshot%202026-03-06%20175700.png">
+
 
 # Benefits of Remote State
 
@@ -206,7 +208,150 @@ Because infrastructure is shared.
 And shared infrastructure needs **a single source of truth**.
 
 ---
+# 📦 Useful Terraform State Commands
 
+Terraform provides several commands to **inspect, manage, and troubleshoot the Terraform state file** safely.
+
+These commands are extremely helpful when debugging infrastructure, refactoring code, or managing resources.
+
+---
+
+## 🔎 List All Resources in State
+
+Displays all resources currently tracked by Terraform in the state file.
+
+```bash
+terraform state list
+```
+
+### Example Output
+
+```bash
+aws_vpc.main
+aws_subnet.public
+aws_instance.web
+aws_s3_bucket.logs
+```
+
+---
+
+## 🔍 View Detailed Resource State
+
+Shows detailed information about a specific resource in the Terraform state.
+
+```bash
+terraform state show <resource>
+```
+
+### Example
+
+```bash
+terraform state show aws_vpc.main
+```
+
+This command displays attributes such as:
+
+- Resource ID  
+- CIDR block  
+- Tags  
+- Region  
+- Associated configurations  
+
+---
+
+## ❌ Remove Resource from State
+
+Removes a resource from Terraform state **without destroying the actual infrastructure**.
+
+This is useful when Terraform should stop managing a resource.
+
+```bash
+terraform state rm <resource>
+```
+
+### Example
+
+```bash
+terraform state rm aws_s3_bucket.logs
+```
+
+⚠️ The resource will still exist in the cloud, but Terraform will no longer track it.
+
+---
+
+## 🔁 Move Resource in State
+
+Moves a resource from one address to another inside the Terraform state file.
+
+This is commonly used when **refactoring Terraform code or renaming resources**.
+
+```bash
+terraform state mv <source> <destination>
+```
+
+### Example
+
+```bash
+terraform state mv aws_instance.web aws_instance.app_server
+```
+
+---
+
+## 📥 Pull Raw State File
+
+Downloads the raw Terraform state from the configured backend.
+
+```bash
+terraform state pull
+```
+
+This command is useful for:
+
+- Debugging state issues  
+- Inspecting full JSON state data  
+- Backup or analysis  
+
+### Example Output (Simplified)
+
+```json
+{
+  "resources": [
+    {
+      "type": "aws_vpc",
+      "name": "main",
+      "instances": []
+    }
+  ]
+}
+```
+
+---
+
+## 📚 Summary
+
+| Command | Purpose |
+|--------|--------|
+| `terraform state list` | List all resources in state |
+| `terraform state show` | View details of a specific resource |
+| `terraform state rm` | Remove a resource from state |
+| `terraform state mv` | Move or rename a resource in state |
+| `terraform state pull` | Download raw state file |
+
+---
+
+## 🚀 Why These Commands Matter
+
+Terraform state commands help engineers:
+
+- Debug infrastructure issues
+- Safely refactor Terraform code
+- Recover from misconfigurations
+- Inspect infrastructure resources
+- Manage resources outside Terraform control
+
+They are essential tools for **DevOps Engineers, Cloud Engineers, and Infrastructure Engineers** working with Terraform.
+
+---
 # Final Thought
 
 A senior DevOps engineer once told me:
