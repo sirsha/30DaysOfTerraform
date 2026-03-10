@@ -309,21 +309,21 @@ terraform plan
 # Uses: environment = "staging" (from variables.tf default)
 mv terraform.tfvars.backup terraform.tfvars  # restore
 ```
-![Example 1](images/terraform-state-diagram.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
 
 ### 2. **Using terraform.tfvars** (automatically loaded)
 ```bash
 terraform plan
 # Uses: environment = "demo" (from terraform.tfvars)
 ```
-![Example 2](images/terraform-state-diagram.png)
+![Example 2](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc3.png)
 
 ### 3. **Command Line Override** (highest precedence)
 ```bash
 terraform plan -var="environment=production"
 # Overrides tfvars: environment = "production"
 ```
-![Example 3](images/terraform-state-diagram.png)
+![Example 3](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc4.png)
 ### 4. **Environment Variables**
 ```bash
 export TF_VAR_environment="staging-from-env"
