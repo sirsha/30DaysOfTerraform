@@ -299,7 +299,7 @@ This project demonstrates:
 - Dynamic S3 bucket naming
 - Reusable tagging strategy
 
----
+
 ## 🚀 Variable Precedence Testing
 
 ### 1. **Default Values** (temporarily hide terraform.tfvars)
@@ -336,7 +336,7 @@ terraform plan
 terraform plan -var-file="dev.tfvars"        # environment = "development"
 terraform plan -var-file="production.tfvars"  # environment = "production"
 ```
-```
+
 # 🚀 Key Takeaways
 
 - **Input Variables** allow Terraform configurations to accept external values.
