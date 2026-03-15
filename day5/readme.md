@@ -154,6 +154,8 @@ locals {
   }
 
   full_bucket_name = "${var.environment}-${var.bucket_name}-${random_string.suffix.result}"
+  bucket_arn = "arn:aws:s3:::${var.environment}-${var.bucket_name}-${random_string.suffix.result}"
+}
 }
 ```
 
@@ -170,6 +172,7 @@ resource "random_string" "suffix" {
 
 resource "aws_s3_bucket" "demo" {
   bucket = local.full_bucket_name
+  arn = local.bucket_arn
 
   tags = local.common_tags
 }
