@@ -45,7 +45,7 @@ Example values:
 "staging"
 "production"
 ```
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
 ---
 
 ## 🔹 Number
@@ -66,7 +66,7 @@ Example values:
 2
 5
 ```
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/2.png)
 ---
 
 ## 🔹 Boolean
@@ -88,7 +88,7 @@ false
 ```
 
 Basic types are simple, but real-world infrastructure requires **structured data**, which brings us to collection types.
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/3.png)
 ---
 
 # 2️⃣ Collection Types
@@ -119,7 +119,7 @@ Common uses:
 - Subnets
 - Instance IDs
   
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/44.png)
 ---
 
 ## 🔹 Set
@@ -140,7 +140,7 @@ Example:
 
 Best when **duplicates should not exist**.
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/5.png)
 ---
 
 ## 🔹 Map
@@ -166,7 +166,7 @@ Example:
 
 Maps are widely used for **AWS tagging strategies**.
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/map.png)
 ---
 
 # 3️⃣ Structural Types
@@ -193,7 +193,7 @@ Example:
 
 Each element must match the defined type.
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/7.png)
 ---
 
 ## 🔹 Object
@@ -222,7 +222,7 @@ Example:
 
 Objects are commonly used in **Terraform modules and structured configurations**.
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day5/sc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/9.png)
 ---
 
 # 4️⃣ Type Validation and Constraints
