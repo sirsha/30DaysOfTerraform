@@ -141,7 +141,8 @@ resource "aws_instance" "web_server" {
 ❌ When you can afford downtime  
 ❌ When you want to minimize costs (temporary duplicate resources)   
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/createbeforedestroy.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/cbd2.png)
 ---
 ## 2. prevent_destroy
 ### What it does:
@@ -177,7 +178,7 @@ resource "aws_s3_bucket" "critical_data" {
 ✅ Compliance-required resources  
 ✅ Resources with important data  
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/pd.png)
 ---
 ### 3. ignore_changes
 What it does:
@@ -217,7 +218,10 @@ ignore_changes = [tags] - Ignore only tags
 ✅ Frequently changing values  
 ✅ Values managed outside Terraform  
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/igc1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/igc2.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/igc3.png)
+
 ---
 
 # 4. replace_triggered_by
@@ -257,7 +261,7 @@ resource "aws_instance" "app_with_sg" {
 ✅ For immutable infrastructure patterns   
 ✅ When you want forced resource rotation    
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/6.8.png)
 --- 
 # 5. precondition
 What it does:
@@ -292,7 +296,7 @@ resource "aws_s3_bucket" "regional_validation" {
 ✅ Ensure dependencies are met   
 ✅ Check environment constraints   
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/6.1.png)
 ---
 # 6. postcondition
 What it does:
@@ -339,7 +343,7 @@ resource "aws_s3_bucket" "compliance_bucket" {
 ✅ Check resource state post-deployment   
 ✅ Validate compliance requirements   
 
-![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day7/1.png)
+![Example 1](https://github.com/sirsha/30DaysOfTerraform/blob/main/day9/6.7.png)
 ---
 
 
